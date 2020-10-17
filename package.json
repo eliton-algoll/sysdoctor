@@ -1,0 +1,8 @@
+{
+  "name": "Cepai",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/eliton-algoll/sysdoctor.git",
+  "author": "eliton-algoll <eliton@algoll.com.br>",
+  "license": "MIT"
+}
