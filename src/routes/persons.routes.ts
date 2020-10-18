@@ -17,24 +17,20 @@ personsRouter.get('/', async (request, response) => {
 
 // create person
 personsRouter.post('/', async (request, response) => {
-  try {
-    const createPerson = new CreatePersonService();
+  const createPerson = new CreatePersonService();
 
-    const { name, cpf, birth, cellPhone, phone, email } = request.body;
+  const { name, cpf, birth, cellPhone, phone, email } = request.body;
 
-    const person = await createPerson.execute({
-      name,
-      cpf,
-      birth,
-      cellPhone,
-      phone,
-      email,
-    });
+  const person = await createPerson.execute({
+    name,
+    cpf,
+    birth,
+    cellPhone,
+    phone,
+    email,
+  });
 
-    return response.json(person);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
+  return response.json(person);
 });
 
 export default personsRouter;

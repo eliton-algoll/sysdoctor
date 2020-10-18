@@ -3,6 +3,8 @@ import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import authConfig from '../config/auth';
 
+import AppError from '../errors/AppError';
+
 import UsersRepository from '../repositories/UsersRepository';
 import User from '../entities/User';
 
@@ -24,14 +26,14 @@ class AuthenticationService {
     const user = await usersRepository.findOne({ where: { username } });
 
     if (!user) {
-      throw Error('Incorrect username/password combination.');
+      throw new AppError('Incorrect username/password combination.', 401);
     }
 
     // checking if password matches the save password
     const passwordMatched = await compare(password, user.password);
 
     if (!passwordMatched) {
-      throw Error('Incorrect username/password combination.');
+      throw new AppError('Incorrect username/password combination.', 401);
     }
 
     const { secret, expiresIn } = authConfig.jwt;

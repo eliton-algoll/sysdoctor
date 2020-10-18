@@ -17,17 +17,13 @@ userRouter.get('/', async (request, response) => {
 
 // create one user
 userRouter.post('/', async (request, response) => {
-  try {
-    const { personId, username, password } = request.body;
+  const { personId, username, password } = request.body;
 
-    const createUser = new CreateUserService();
+  const createUser = new CreateUserService();
 
-    const user = await createUser.execute({ personId, username, password });
+  const user = await createUser.execute({ personId, username, password });
 
-    return response.json(user);
-  } catch (err) {
-    return response.status(400).json(err.message);
-  }
+  return response.json(user);
 });
 
 export default userRouter;

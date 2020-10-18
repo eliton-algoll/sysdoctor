@@ -1,5 +1,7 @@
 import { getRepository } from 'typeorm';
 
+import AppError from '../errors/AppError';
+
 import Person from '../entities/Person';
 
 interface RequestDTO {
@@ -35,7 +37,7 @@ class CreatePersonService {
     });
 
     if (checkCPFExists) {
-      throw Error('CPF already used');
+      throw new AppError('CPF already used');
     }
 
     const person = personRepository.create({
