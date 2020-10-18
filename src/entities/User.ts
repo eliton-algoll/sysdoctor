@@ -10,8 +10,8 @@ import {
 
 import Person from './Person';
 
-@Entity('appointments')
-class Appointment {
+@Entity('users')
+class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -22,8 +22,14 @@ class Appointment {
   @JoinColumn({ name: 'person_id' })
   person: Person;
 
-  @Column('time with time zone')
-  date: Date;
+  @Column()
+  username: string;
+
+  @Column()
+  password: string;
+
+  @Column()
+  status: boolean;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
@@ -32,4 +38,4 @@ class Appointment {
   updatedAt: Date;
 }
 
-export default Appointment;
+export default User;
