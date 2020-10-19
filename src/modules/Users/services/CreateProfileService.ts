@@ -5,7 +5,7 @@ import AppError from '@shared/errors/AppError';
 import IProfilesRepository from '@modules/Users/repositories/IProfilesRepository';
 import Profile from '../infra/typeorm/entities/Profile';
 
-interface IrequestDTO {
+interface IRequestDTO {
   profile: string;
 }
 
@@ -16,7 +16,7 @@ class CreateProfileService {
     private profilesRepository: IProfilesRepository,
   ) {}
 
-  public async execute({ profile }: IrequestDTO): Promise<Profile> {
+  public async execute({ profile }: IRequestDTO): Promise<Profile> {
     // checking if user exists
     const userProfile = await this.profilesRepository.findByProfile(profile);
 

@@ -26,7 +26,7 @@ class UsersRepository implements IUserRepository {
   }
 
   // filter appointment in especific date
-  public async findByUsernameOrId(
+  public async findByUsernameOrPersonId(
     username: string,
     personId: string,
   ): Promise<User | undefined> {

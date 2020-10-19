@@ -5,6 +5,7 @@ import { injectable, inject } from 'tsyringe';
 
 import IUsersRepository from '@modules/Users/repositories/IUsersRepository';
 import AppError from '@shared/errors/AppError';
+import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 
 import User from '../infra/typeorm/entities/User';
 
@@ -23,6 +24,9 @@ class AuthenticationService {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
+
+    @inject('HashProvider')
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ username, password }: RequestDTO): Promise<Response> {
@@ -34,7 +38,10 @@ class AuthenticationService {
     }
 
     // checking if password matches the save password
-    const passwordMatched = await compare(password, user.password);
+    const passwordMatched = await this.hashProvider.compareHash(
+      password,
+      user.password,
+    );
 
     if (!passwordMatched) {
       throw new AppError('Incorrect username/password combination.', 401);

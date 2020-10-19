@@ -10,7 +10,10 @@ interface IUserRepository {
 
   findById(id: string): Promise<User | undefined>;
 
-  findByUsernameOrId(username: string, id: string): Promise<User | undefined>;
+  findByUsernameOrPersonId(
+    username: string,
+    personId: string,
+  ): Promise<User | undefined>;
 
   findByUsername(username: string): Promise<User | undefined>;
 }
