@@ -42,6 +42,12 @@ class PersonsRepository implements IPersonRepository {
 
     return findPerson;
   }
+
+  public async findByEmail(email: string): Promise<Person | undefined> {
+    const findPerson = this.persons.find(person => person.email === email);
+
+    return findPerson;
+  }
 }
 
 export default PersonsRepository;

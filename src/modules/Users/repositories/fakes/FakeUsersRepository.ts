@@ -5,7 +5,7 @@ import ICreateUserDTO from '@modules/Users/dtos/ICreateUserDTO';
 
 import User from '../../infra/typeorm/entities/User';
 
-class UsersRepository implements IUsersRepository {
+class FakeUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
   // create an Appointment
@@ -63,6 +63,14 @@ class UsersRepository implements IUsersRepository {
 
     return findUser;
   }
+
+  public async findByPersonId(personId: string): Promise<User | undefined> {
+    const findUser = this.users.find(
+      userData => userData.personId === personId,
+    );
+
+    return findUser;
+  }
 }
 
-export default UsersRepository;
+export default FakeUsersRepository;

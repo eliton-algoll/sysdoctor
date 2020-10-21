@@ -11,6 +11,8 @@ interface IPersonsRepository {
   findByCpf(cpf: string): Promise<Person | undefined>;
 
   findById(id: string): Promise<Person | undefined>;
+
+  findByEmail(email: string): Promise<Person | undefined>;
 }
 
 export default IPersonsRepository;

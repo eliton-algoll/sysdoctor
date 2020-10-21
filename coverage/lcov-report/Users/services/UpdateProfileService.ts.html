@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -93,11 +93,9 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,32 +104,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { injectable, inject } from 'tsyringe';
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { injectable, inject } from 'tsyringe';</span>
 &nbsp;
-import AppError from '@shared/errors/AppError';
+<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
 &nbsp;
 import IProfilesRepository from '@modules/Users/repositories/IProfilesRepository';
 import Profile from '../infra/typeorm/entities/Profile';
@@ -142,29 +142,29 @@ interface IrequestDTO {
 }
 &nbsp;
 @injectable()
-class UpdateProfileService {
-  constructor(
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >class <span class="cstat-no" title="statement not covered" >U</span></span>pdateProfileService {</span>
+<span class="fstat-no" title="function not covered" >  constructor(</span>
     @inject('ProfilesRepository')
-    private profilesRepository: IProfilesRepository,
+    private <span class="cstat-no" title="statement not covered" >profilesRepository: IProfilesRepository,</span>
   ) {}
 &nbsp;
-  public async execute({ id, profile }: IrequestDTO): Promise&lt;Profile&gt; {
-    const profileSave = await this.profilesRepository.findById(id);
+<span class="fstat-no" title="function not covered" >  public async <span class="cstat-no" title="statement not covered" >e</span>xecute({ id<span class="cstat-no" title="statement not covered" >, p</span>rofile<span class="cstat-no" title="statement not covered" > }: IrequestDTO)</span>: Promise&lt;Profile&gt; {</span>
+    const <span class="cstat-no" title="statement not covered" >profileSave = <span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >await this.profilesRepository.findById(id);</span></span></span>
 &nbsp;
-    if (!profileSave) {
-      throw new AppError('Profile not found', 404);
+<span class="cstat-no" title="statement not covered" >    if (!profileSave) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new AppError('Profile not found', 404);</span>
     }
 &nbsp;
-    const profileSaved = this.profilesRepository.save({
+    const <span class="cstat-no" title="statement not covered" >profileSaved = this.profilesRepository.save({</span>
       ...profileSave,
       profile,
     });
 &nbsp;
-    return profileSaved;
+<span class="cstat-no" title="statement not covered" >    return profileSaved;</span>
   }
-}
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-export default UpdateProfileService;
+<span class="cstat-no" title="statement not covered" >export default UpdateProfileService;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -172,7 +172,7 @@ export default UpdateProfileService;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Oct 19 2020 00:16:53 GMT-0300 (GMT-03:00)
+                at Wed Oct 21 2020 01:27:22 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>

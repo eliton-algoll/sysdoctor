@@ -16,6 +16,8 @@ interface IUserRepository {
   ): Promise<User | undefined>;
 
   findByUsername(username: string): Promise<User | undefined>;
+
+  findByPersonId(personId: string): Promise<User | undefined>;
 }
 
 export default IUserRepository;

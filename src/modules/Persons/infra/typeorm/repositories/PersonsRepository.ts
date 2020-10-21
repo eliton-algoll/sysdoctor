@@ -37,6 +37,14 @@ class PersonsRepository implements IPersonRepository {
   public async findById(id: string): Promise<Person | undefined> {
     return this.ormRepository.findOne(id);
   }
+
+  public async findByEmail(email: string): Promise<Person | undefined> {
+    return this.ormRepository.findOne({
+      where: {
+        email,
+      },
+    });
+  }
 }
 
 export default PersonsRepository;
