@@ -54,7 +54,7 @@ describe('RecoverPassword', () => {
   });
 
   it('should not be able to recover the password with an non-existent token', async () => {
-    expect(
+    await expect(
       resetPassword.execute({
         token: '321654',
         password: '987987',
@@ -66,7 +66,7 @@ describe('RecoverPassword', () => {
     // create a token
     const token = await fakeUserTokensRepository.generate('123456');
 
-    expect(
+    await expect(
       resetPassword.execute({
         token: token.token,
         password: '987987',
